@@ -412,6 +412,10 @@ h2 {
     
 }
 
+canvas {
+  max-height: 100%;
+}
+
 /* -------- TABLE --------*/
 table {
     table-layout: fixed;
