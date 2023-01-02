@@ -6,11 +6,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/index.css"> 
+    <link rel="stylesheet" href="./index.css"> 
 </head>
 <body>
 
-    
-    
+    <header>
+        <div class="page-header">
+            <button type="button" class="btn" data-modal-sing-in-open>Logowanie</button>
+
+            <button type="button" class="btn" data-modal-sing-up-open>Rejestracja</button>
+            
+            <img class="img-wallet" src="./image/wallet-color-big.png" alt="wallet">
+            
+            <button type="button" class="close-out btn" data-modal-close>Wyloguj</button>
+        </div>
+    </header>
+
+    <section class="about-wallet">
+        <h1>Twoje finanse to twoje romanse</h1>
+        <h2>Miej wszystko pod kontrolą, bądź dyrygentem za swoje pieniądze</h2>
+        <p>Jedną z głównych metod poprawy kondycji finansowej jest przejrzysta kontrola i księgowość.</p>
+        <p>Ta aplikacja pomoże Ci na co dzień być świadomym bilansu finansowego, przeglądać historię transakcji oraz analizować wydatki i dochody</p>
+        <h3>Spojrzyj z nami z większą pewnością w swoją finansową przyszłość!</h3>
+    </section>
+
+    <footer class="footer">
+        <h4 class="footer-text">2023 | Developed with <span class="icon-heart">
+            <svg width="18" height="18">
+            <use href="./image/heart.svg#icon-heart"></use>
+        </svg>
+        </span>  for <span class="intive">intive</span> by Olena Holubonkova</h4> 
+        <!-- <svg class="logo-intive" width="77" height="24">
+            <use href="./image/icon-intive.svg#icon-intive" width="70" height="70"></use>
+        </svg> -->
+    </footer>
+<!-- -- MODAL - SING IN--- -->
+<div class="backdrop is-hidden" data-modals>
+    <div class="modal-container sing-in-modal">
+        <button type="button" class="close-btn" data-modal-close>
+            <div class="close-btn-inner">
+                <span class="close-btn-text">Wróć</span>
+            </div>
+        </button>
+
+        <form class="modal-form sing-in">
+            <p class="modal-form-call">Logowanie</p> 
+
+            <label class="modal-form-field">
+                <span class="modal-form-input-descr">Nazwa użytkownika / Email</span>
+                <input type="text" name="user-data-sing-in" class="modal-form-input js-data-sing-in" required autocomplete="off">
+            </label>
+
+            <label class="modal-form-field">
+                <span class="modal-form-input-descr">Hasło</span>
+                <input type="text" name="user-data-password" class="modal-form-input js-data-password" required autocomplete="off">
+            </label>
+
+            <button type="submit" class="modal-form-submit js-sing-in btn">Zaloguj</button>
+        </form>
+    </div>
+</div>
+<!-- -- MODAL - SING IN   End--- -->
+
+<!-- Header if modal Sing in open -->
+<header>
+        <div class="page-header sing-in-open">
+            
+            <button type="button" class="sing-up-btn" data-modal-sing-up-open>Rejestracja</button>
+            
+            <img class="img-wallet" src="./image/wallet-color-big.png" alt="wallet">
+            
+        </div>
+    </header>
+<!-- Header if modal Sing in open End-->
+
+<!-- -- MODAL - SING UP   --- -->
+<div class="backdrop is-hidden" data-modals>
+    <div class="modal-container sing-up-modal">
+        <button type="button" class="close-btn" data-modal-close>
+            <svg class="icon-close" width="18" height="18">
+                <use href="./image/icon-intive.svg"></use>
+            </svg>
+        </button>
+
+        <form class="modal-form sing-up">
+            <p class="modal-form-call">Rejestracja</p> 
+
+            <label class="modal-form-field">
+                <span class="modal-form-input-descr">Nazwa użytkownika</span>
+                <input type="text" name="user-data-sing-up-name" class="modal-form-input js-data-sing-up" required autocomplete="off" minlength="6" maxlength="16">
+            </label>
+
+            <label class="modal-form-field">
+                <span class="modal-form-input-descr">Hasło</span>
+                <input type="text" name="user-data-password" class="modal-form-input js-data-password" required autocomplete="off" minlength="6">
+            </label>
+
+            <label class="modal-form-field">
+                <span class="modal-form-input-descr">Email</span>
+                <input type="email" name="user-data-sing-up-email" class="modal-form-input js-data-sing-up" required autocomplete="off">
+            </label>
+
+            <label class="modal-form-field">
+                <span class="modal-form-input-descr">Potwierdź email</span>
+                <input type="email" name="user-data-sing-up-email-control" class="modal-form-input js-data-sing-up" required autocomplete="off">
+            </label>
+
+            <button type="submit" class="modal-form-submit js-sing-up">Zarejetruj</button>
+        </form>
+    </div>
+</div>
+<!-- -- MODAL - SING UP End  --- -->
+
+<!-- Header if modal Sing up open -->
+<header>
+        <div class="page-header sing-up-open">
+            
+            <button type="button" class="sing-in-btn" data-modal-sing-in-open>Logowanie</button>
+            
+            <img class="img-wallet" src="./image/wallet-color-big.png" alt="wallet">
+            
+        </div>
+    </header>
+<!-- Header if modal Sing up open End-->
+
+<!-- Main Window User -->
+    <header>
+        <div class="page-header main-window">
+            
+            <img class="img-wallet" src="./image/wallet-color-big.png" alt="wallet">
+            
+            <p class="user-name js-user-name">My name</p>
+            
+            <button type="button" class="close-out btn" data-modal-close>Wyloguj</button>
+        </div>
+    </header>
+
+    <section class="main-windiow-section">
+        <div class="charts">
+
+        </div>
+        <div class="transaction-history">
+            <p class="title-transaction">HISTORIA TRANSAKCJI</p>
+            <div class="statistic-table">
+    <!-- Table  -->
+<table class="js-table-statistic">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Typ transakcji</th>
+            <th>Opis</th>
+            <th>Kwota</th>
+            <th>Saldo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>01/01/2023</td>
+            <td>+</td>
+            <td>wnesek</td>
+            <td>8000</td>
+            <td>+6000</td>
+        </tr>
+        <tr>
+            <td>01/01/2023</td>
+            <td>+</td>
+            <td>wnesek</td>
+            <td>8000</td>
+            <td>+6000</td>
+        </tr>
+        <tr>
+            <td>01/01/2023</td>
+            <td>+</td>
+            <td>wnesek</td>
+            <td>8000</td>
+            <td>+6000</td>
+        </tr>
+    </tbody>
+</table>
+<!-- Table  End-->
+
+            </div>
+        </div>
+
+    </section>
+    <!-- Main Window User End  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.1/chart.min.js" integrity="sha512-MC1YbhseV2uYKljGJb7icPOjzF2k6mihfApPyPhEAo3NsLUW0bpgtL4xYWK1B+1OuSrUkfOTfhxrRKCz/Jp3rQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./index.js"></script>
 </body>
 </html>
