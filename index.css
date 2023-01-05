@@ -46,7 +46,12 @@ body {
     letter-spacing: 0.03em;
     background-color: var(--body-background-color);
     color: var(--text-color);
+    /* height: 100vh; ПРИБРАТИ ПІСЛЯ НАЛАШТУВАННЯ */
     }
+    
+.no-scroll {
+    overflow: hidden;
+  }
 
 h1,
 h2,
@@ -75,7 +80,7 @@ section {
   margin: -1px;
 }
 
-button {
+.btn {
 cursor: pointer;
 background-color: var(--botton-color);
 color: var(--text-color);
@@ -86,9 +91,9 @@ border-color: var(--body-background-color);
 transition: background-color var(--transition-dur-func);
 margin-left: 10px;
 }
-
-button:hover,
-button:focus {
+ 
+.btn:hover,
+.btn:focus {
     background-color: var(--botton-accent-color);
     font-style: italic;
 }
@@ -107,6 +112,10 @@ h2 {
 }
 
 /* --------MODAL----------- */
+.active-modal {
+  overflow-y: hidden;
+}
+
 .backdrop {
   position: fixed;
   z-index: 100;
@@ -118,12 +127,13 @@ h2 {
   opacity: 1;
   visibility: visible;
   transition: opacity var(--transition-dur-func), visibility var(--transition-dur-func);
+  overflow-y: auto;
 }
-.backdrop.is-hidden { 
+/* .backdrop.is-hidden { 
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-}
+} */
 
 .is-hidden { 
   visibility: hidden;
@@ -166,10 +176,12 @@ h2 {
   width: 30px;
   height: 30px;
   background-color: transparent;
+  background-color: transparent;
   cursor: pointer;
+   align-items: center;
   /* display: flex;
   justify-content: center;
-  align-items: center;
+ 
   position: absolute;
   top: 8px;
   right: 8px;
@@ -188,7 +200,7 @@ h2 {
 }
 
 .close-btn-text {
-  font-size: 11px;
+  font-size: 21px;
   line-height: 1.1;
   text-transform: uppercase;
   color: var(--botton-accent-color);
@@ -246,8 +258,8 @@ h2 {
   flex-direction: column;
   justify-content: center;
 }
-.sing-in {
-}
+/* .sing-in {
+} */
 .modal-form-call {
   text-align: center;
   font-size: 20px;
@@ -292,13 +304,19 @@ h2 {
     background-color: var(--header-background-color);
     color: var(--white-color);
     display: flex;
+    align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    position: relative;
 }
-.sing-in-btn, .sing-up-btn {
+/* .sing-in-btn, .sing-up-btn {
     margin-left: auto;
+} */
+.center-position {
+  position: absolute;
+  left: 45%;
+  /* transform: translateX(50%); */
 }
-
 .close-out {
     margin-right: 10px;
 }
@@ -312,6 +330,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* height: 80vh; */
+}
+
+.not-show {
+  display: none;
 }
 /* --------End   HEADER  ---------*/
 
@@ -345,14 +368,14 @@ h2 {
 /* -------- End FOOTER --------*/
 
 
-.is-hidden {
+/* .is-hidden {
 }
 
 
 .modal-container {
   /* max-width: 600px; */
-}
-.sing-in-modal {
+/* } */
+/* .sing-in-modal {
 }
 .icon-close {
 }
@@ -363,13 +386,13 @@ h2 {
 }
 
 .js-sing-in {
-}
+} */ 
 .sing-in-open,
 .sing-up-open {
     display: flex;
     justify-content: center;
 }
-.sing-up-modal {
+/* .sing-up-modal {
 }
 .sing-up {
 }
@@ -379,7 +402,7 @@ h2 {
 }
  
 .js-table-statistic {
-}
+} */
 
 .main-window {
     display: flex;
@@ -402,8 +425,8 @@ h2 {
     /* margin-right: auto; */
 }
  
-.js-user-name {
-}
+/* .js-user-name { */
+/* } */
 .main-windiow-section {
     display: flex;
     flex-direction: column;
@@ -423,9 +446,9 @@ table {
   border-collapse: collapse;
   border: 3px solid purple;
 }
-.charts {
+/* .charts {
 
-}
+} */
 .transaction-history {
     text-align: center;
 }
