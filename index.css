@@ -214,6 +214,22 @@ h2 {
   background-color: transparent;
 }
 
+.close-btn-normal-state {
+  border: none;
+  display: flex;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+   align-items: center;
+}
+
 .close-btn-inner::before,
 .close-btn-inner::after {
   position: absolute;
@@ -327,9 +343,11 @@ h2 {
 }
 
 .about-wallet {
+  padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     /* height: 80vh; */
 }
 
@@ -413,17 +431,19 @@ h2 {
     margin-left: auto;
 } */
 .user-name {
-    font-weight: 600;
-  font-size: 26px;
-  line-height: 1.17;
-  color: var(--title-text-color);
   align-self: center;
   padding-left: 10px;
   padding-right: 10px;
 }
-.main-window > .img-wallet {
-    /* margin-right: auto; */
+.user-name-text {
+    font-weight: 600;
+  font-size: 26px;
+  line-height: 1.17;
+  color: var(--title-text-color);
 }
+/* .main-window > .img-wallet {
+    /* margin-right: auto; */
+/* } */ */
  
 /* .js-user-name { */
 /* } */
